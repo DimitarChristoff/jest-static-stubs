@@ -23,14 +23,42 @@ export default class Foo extends React.Component {
 
   render(){
     return <div>
-      <img src={logo} onLoad={::this.handleLoad} ref={logo => this.logo = logo} />
+      <img src={Logo} onLoad={::this.handleLoad} ref={logo => this.logo = logo} />
     </div>;
   }
 }
 ```
 
+Testing then is just transparent:
 
-## how?
+```
+import React from 'react';
+import renderer from 'react-test-renderer';
+import Foo from '../src/foo';
+
+jest.mock('react-dom');
+
+describe('component tests >', () => {
+
+  it('renders correctly', () => {
+    const tree = renderer.create(<Foo />).toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+});
+```
+
+The snapshot will just have something like
+```js
+exports[`component tests > renders correctly 1`] = `
+<div>
+  <img
+    onLoad={[Function bound handleLoad]}
+    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+P+/HgAFhAJ/wlseKgAAAABJRU5ErkJggg==" />
+</div>
+`;
+```
+
+## how to use
 
 ```sh
 $ npm i jest-static-stubs -D
