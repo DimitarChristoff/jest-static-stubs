@@ -68,16 +68,28 @@ Edit `package.json` and in the `jest` section, add your mappers:
 
 ```json
 {
-    "jest": {
-        "moduleNameMapper": {
-            "^.+\\.(jpg|jpeg)$": "jest-static-stubs/jpg",
-            "^.+\\.gif$": "jest-static-stubs/gif",
-            "^.+\\.png$": "jest-static-stubs/png",
-            "^.+\\.(eot|otf|svg|ttf|woff|woff2|mp3|m4a|aac|oga)$": "identity-obj-proxy",
-        }
+  "jest": {
+    "moduleNameMapper": {
+      "^.+\\.(jpg|jpeg)$": "jest-static-stubs/jpg",
+      "^.+\\.gif$": "jest-static-stubs/gif",
+      "^.+\\.(eot|otf|svg|ttf|woff|woff2|mp3|m4a|aac|oga)$": "identity-obj-proxy",
     }
+  }
 }
 ```
+
+Jest module mappers support capturing regex as well. This means you can create catch-all mappings like this:
+
+```json
+{
+  "jest": {
+    "moduleNameMapper": {
+       "^.+\\.(jpg|jpeg|gif|png|mp4|mkv|avi|webm|swf|wav|mid)$": "jest-static-stubs/$1"
+    }
+  }
+}
+```
+
 
 ## types
 
