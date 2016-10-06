@@ -1,0 +1,25 @@
+{
+  "name": "jest-static-stubs",
+  "version": "0.0.0",
+  "description": "Static media type stubs for use in jest tests",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DimitarChristoff/jest-static-stubs.git"
+  },
+  "keywords": [
+    "jest",
+    "react",
+    "stubs",
+    "blank.gif"
+  ],
+  "author": "Dimitar Christoff",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DimitarChristoff/jest-static-stubs/issues"
+  },
+  "homepage": "https://github.com/DimitarChristoff/jest-static-stubs#readme"
+}

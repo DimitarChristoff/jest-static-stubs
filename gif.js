@@ -1,0 +1,2 @@
+// 1x1 gif
+module.exports = 'data:image/gif;base64,R0lGODlhAQABAIAAAAEBAQAAACH5BAEAAAAALAAAAAABAAEAAAIBRAA7';

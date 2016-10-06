@@ -1,0 +1,2 @@
+// one instrument, no frames
+module.exports = 'data:application/octet-stream;base64,TVRoZAAAAAYAAQACA8BNVHJrAAAAYgD/fw8FDxwyMDEyLjAxLjAxAQMA/38qBQ8tTWljcm9zb2Z0IFNhbnMgU2VyaWYsOC4yNSxGYWxzZSxGYWxzZSwxAP9YBAQCGAgA/38LBQ8SAwN/fwD/AQQA/1kCAAAA/y8ATVRyawAAACQA/38FBQ8JQAkA/38JBQ8GPG5vbmU+AP8DASAA/yABAAD/LwA=';
